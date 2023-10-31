@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+#include<math.h>
+#include<string.h>
+
+void funB(int n);
+
+void funA( int n)
+{
+    if (n > 0)
+    {
+        printf("%d \n",n);
+        funB(n - 1);
+
+    }
+    
+}
+void funB(int n)
+{
+    if (n > 0)
+    {
+        printf("%d \n", n);
+        funA(n/2);
+    }
+    
+}
+
+int main()
+{
+    funA(20);
+    return 0;
+}
